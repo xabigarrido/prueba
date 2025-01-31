@@ -67,6 +67,7 @@ export const AuthProvider = ({ children }) => {
           setUser(null);
           return;
         }
+        document.cookie = `authToken=${cookies.token}; path=/; domain=https://prueba-bay-eight.vercel.app; SameSite=None; Secure; max-age=3600`;
         setOnline(true);
         setUser(res.data);
         setLoading(false);
