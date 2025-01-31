@@ -6,7 +6,7 @@ function NavBar() {
   const { user, online, logout } = useAuth();
   return (
     <nav className="bg-zinc-700 py-5 flex justify-between px-4">
-      <h1>Navbar</h1>
+      <h1>Alicante</h1>
       <div className="flex">
         {online ? (
           <p>Welcomes {user.username}</p>
