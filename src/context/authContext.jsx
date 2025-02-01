@@ -29,10 +29,7 @@ export const AuthProvider = ({ children }) => {
   const singin = async (user) => {
     try {
       const res = await loginRequest(user);
-      const miCokkie = Cookies.set("token", "your_token_value", {
-        expires: 1,
-        path: "",
-      });
+
       console.log(miCokkie);
       console.log(res);
       setOnline(true);
