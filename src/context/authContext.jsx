@@ -54,6 +54,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const getOnline = async () => {
       const cookies = Cookies.get();
+      console.log(cookies);
       if (!cookies.token) {
         setLoading(false);
         setOnline(false);
@@ -67,7 +68,7 @@ export const AuthProvider = ({ children }) => {
           setUser(null);
           return;
         }
-        document.cookie = `authToken=${cookies.token}; path=/; SameSite=None; Secure; max-age=3600`;
+        // document.cookie = `authToken=${cookies.token}; path=/; SameSite=None; Secure; max-age=3600`;
         setOnline(true);
         setUser(res.data);
         setLoading(false);
