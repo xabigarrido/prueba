@@ -8,7 +8,7 @@ function TasksList() {
   const { getTasks, tasks, deleteTask } = useTask();
   useEffect(() => {
     getTasks();
-  }, []);
+  }, [tasks]);
   return (
     <div className="grid gap-2 grid-cols-4">
       {tasks.map((task) => (
